@@ -1,0 +1,42 @@
+<div class="navbar-nav w-100">
+    <div class="nav-item dropdown dropright">
+        <a href="products.php" class="nav-link dropdown-toggle" data-toggle="dropdown" onclick="redirectToProductsPage(event)">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
+        <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+            <a href="" class="dropdown-item">Men's Dresses</a>
+            <a href="" class="dropdown-item">Women's Dresses</a>
+            <a href="" class="dropdown-item">Baby's Dresses</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+To redirect to the required url
+
+ -->
+
+<script>
+function redirectToProductsPage(event) {
+    event.preventDefault(); // Prevent the default dropdown toggle behavior
+    window.location.href = event.currentTarget.getAttribute('href'); // Manually navigate to the products.php page
+}
+</script>
+
+<!-- 
+Style is for hovering effect on main category
+
+ -->
+
+ <style>
+        
+       /* Add CSS to show dropdown on hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* CSS for hover effect on the "Dresses" link */
+        .nav-link:hover + .dropdown-menu {
+            display: block;
+        }
+
+    </style>
