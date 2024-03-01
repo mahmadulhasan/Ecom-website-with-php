@@ -1,4 +1,5 @@
 <?php 
+// here add to cart logic is done
 session_start();
 //session_destroy();
 
